@@ -12,7 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<ApplicationDBContext> (options => {  //That's where we specify whcih database we use. In this case we use sqlserver and we have added the necessary addons.
+builder.Services.AddDbContext<ApplicationDBContext> (options => {  //That's where we specify which database we use. In this case we use sqlserver and we have added the necessary addons.
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")); //This will look into our appsettings.json
     }); //Always before var app = builder.Build();
 
