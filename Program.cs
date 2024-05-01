@@ -1,5 +1,6 @@
 using api.bin.Interfaces;
 using api.Data;
+using api.Interfaces;
 using api.Repository;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,8 +18,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationDBContext> (options => {  //That's where we specify which database we use. In this case we use sqlserver and we have added the necessary addons.
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")); //This will look into our appsettings.json
     }); //Always before var app = builder.Build();
-
-builder.Services.AddScoped<IStockRepository, StockRepository>();
+    
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+{
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+});
+builder.Services.AddScoped<IStockRepository, StockRepository>(); //Always before var app = builder.Build();
+builder.Services.AddScoped<ICommentRepository, CommentRepository>(); //Always before var app = builder.Build();
 
 var app = builder.Build();
 
