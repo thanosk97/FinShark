@@ -1,8 +1,8 @@
 This is  a React + .NET Core project!
 
-Markup:   - React
-          -  TypeScript
-          -  ASP.NET Core Web Api .NET 8
+Markup: - React
+          - TypeScript
+          - ASP.NET Core Web Api .NET 8
                       * Models
                       * Entity Framework
                       * Controllers
@@ -12,7 +12,7 @@ Markup:   - React
                       * Repository Pattern
                       * Dependency Injection
                       * One-To-Many/Many-To-Many/One-To-One
-                      * Data Validation
+            * Data Validation
             * Filtering
             * Sorting
             * Pagination
