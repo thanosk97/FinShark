@@ -18,7 +18,7 @@ This is a React + .NET Core project!
     * Sorting
     * Pagination
     * Identity
-    * Register
-    * Token Service
-    * Login
+       * Register
+       * Token Service
+       * Login
 
