@@ -87,6 +87,8 @@ builder.Services.AddAuthentication(options => {
 builder.Services.AddScoped<IStockRepository, StockRepository>(); //Always before var app = builder.Build();
 builder.Services.AddScoped<ICommentRepository, CommentRepository>(); //Always before var app = builder.Build();
 builder.Services.AddScoped<ITokenService, TokenService>(); //Adds the Dependency Injection 
+builder.Services.AddScoped<IPortfolioRepository, PortfolioRepository>(); //Adds the Dependency Injection 
+
 
 var app = builder.Build();
 

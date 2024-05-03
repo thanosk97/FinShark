@@ -12,6 +12,7 @@ namespace api.bin.Interfaces
     {
         Task<List<Stock>> GetAllAsync(QueryObject query); 
         Task<Stock?> GetByIdAsync(int id); //FirstOrDefault can return null. That's why we need the '?'. Essentially allows it to be null.
+        Task<Stock?> GetBySymbolAsync(string symbol);
         Task<Stock> CreateAsync(Stock stockModel);
         Task<Stock?> UpdateAsync(int id, UpdateStockRequestDto stockDto);
         Task<Stock?> DeleteAsync(int id);
