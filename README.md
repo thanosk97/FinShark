@@ -12,7 +12,10 @@ This is a React + .NET Core project!
     * Async/Await
     * Repository Pattern
     * Dependency Injection
-    * One-To-Many/Many-To-Many/One-To-One Relationships
+    * Relationships
+       * One-To-Many
+       * Many-To-Many
+       * One-To-One Relationships
     * Data Validation
     * Filtering
     * Sorting
