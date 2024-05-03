@@ -3,6 +3,7 @@ This is a React + .NET Core project!
 * Technologies:
     * React
     * TypeScript
+    * C#
 * ASP.NET Core Web Api .NET 8
     * Models
     * Entity Framework
