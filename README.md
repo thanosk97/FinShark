@@ -1,8 +1,8 @@
 This is  a React + .NET Core project!
 
-Includes: - React
-          - TypeScript
-          - ASP.NET Core Web Api .NET 8
+Includes: -  React
+          -  TypeScript
+          -  ASP.NET Core Web Api .NET 8
             * Models
             * Entity Framework
             * Controllers
