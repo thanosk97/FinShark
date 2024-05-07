@@ -1,11 +1,20 @@
 import React from 'react'
+import  "./Card.css";
+import internal from 'stream';
 
-const Card = () => {
+interface Props{
+  companyName: string;
+  ticker: string;
+  price: number;
+}
+
+const Card: React.FC<Props> = ({companyName, ticker, price}: Props) : JSX.Element => {
   return (
     <div className='card'>Card
         <div className='details'>
-            <h2>APPL</h2>
-            <p className='info'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, odit quibusdam. Amet, fugit tempora consequuntur aperiam doloremque possimus dolore aspernatur praesentium consequatur explicabo atque cupiditate, odit dicta maxime voluptas hic.</p>
+            <h2>{companyName} {ticker}</h2>
+            <p>${price}</p>
+            <p className='info'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores officiis magnam iure amet ipsam explicabo in adipisci ducimus labore et exercitationem sapiente nam esse, sint cupiditate eos officia molestias minima!</p>
         </div>    
     </div>
   )
