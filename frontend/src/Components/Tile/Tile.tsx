@@ -19,7 +19,7 @@ const Tile = ({title, subTitle}: Props) => {
 
                           <h5 className="text-blueGray-400 uppercase font-bold text-xs">
 
-                            title
+                            {title}
 
                           </h5>
 
