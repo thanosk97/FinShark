@@ -88,7 +88,8 @@ builder.Services.AddScoped<IStockRepository, StockRepository>(); //Always before
 builder.Services.AddScoped<ICommentRepository, CommentRepository>(); //Always before var app = builder.Build();
 builder.Services.AddScoped<ITokenService, TokenService>(); //Adds the Dependency Injection 
 builder.Services.AddScoped<IPortfolioRepository, PortfolioRepository>(); //Adds the Dependency Injection 
-
+builder.Services.AddScoped<IFMPService, FMPService>(); //Adds the Dependency Injection 
+builder.Services.AddHttpClient<IFMPService, FMPService>();
 
 var app = builder.Build();
 
@@ -100,6 +101,14 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .AllowCredentials()
+    //.WithOrigins("https://localhost:5105") 
+    .SetIsOriginAllowed(origin => true)
+    );
 
 app.UseAuthentication();
 app.UseAuthorization();
